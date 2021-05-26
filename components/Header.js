@@ -5,7 +5,9 @@ function Header() {
   return (
     <header className="flex justify-between bg-black text-white">
       <div className="ml-4 mt-4 sm:ml-10 lg:ml-20">
-        <p className="text-3xl sm:text-6xl">space posters</p>
+        <a href="/" className="text-3xl sm:text-6xl">
+          space posters
+        </a>
       </div>
       <div className="flex">
         <div className="relative md:hidden mr-4 mt-4">

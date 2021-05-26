@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         Poppins: ["Poppins"],
       },
+      backgroundImage: (theme) => ({
+        hero: 'url("/mockup-1.png")',
+        sola: 'url("/solar-system.png")',
+      }),
     },
   },
   variants: {
