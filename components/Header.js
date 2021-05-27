@@ -8,7 +8,7 @@ function Header() {
     <header className="flex justify-between bg-black text-white">
       <div className="ml-4 mt-4 sm:ml-10 lg:ml-20">
         <a href="/" className="text-3xl sm:text-6xl">
-          {t("logo")}
+          space posters
         </a>
       </div>
       <div>{}</div>
