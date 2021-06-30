@@ -6,7 +6,7 @@ function Header() {
   const { t } = useTranslation("header");
   return (
     <header className="flex justify-between bg-black text-white">
-      <div className="ml-4 mt-4 sm:ml-10 lg:ml-20">
+      <div className="ml-4 mt-4 pb-4 sm:ml-10 lg:ml-20">
         <a href="/" className="text-3xl sm:text-6xl">
           space posters
         </a>

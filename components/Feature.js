@@ -8,7 +8,7 @@ const Feature = () => {
           <h1 className='text-2xl sm:text-5xl'>our posters</h1>
         </div>
         <div className='grid justify-items-center space-y-4 sm:grid-cols-2 sm:space-y-0'>
-          <a href='/posters'>
+          <a href='/[slug]'>
           <ImgCard image={"/img/1-1920.jpg"} />
           </a>
           <a href='/posters'>
