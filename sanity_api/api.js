@@ -5,7 +5,7 @@ export async function getAllPosters() {
     .fetch(`*[_type == "posters"]{
       title,
       slug,
-      "imageUrl": image.asset->url,
+      "imageUrl": image1.asset->url,
     }| order(date desc)[0..2]`);
   return results;
 }
