@@ -15,7 +15,14 @@ const Poster = () => {
                 </style>
             </Head>
             <Header />
-            <h1 className="text-white">Poster</h1>
+            <div className='grid justify-items-center space-y-4 sm:grid-cols-2 sm:space-y-0'>
+                <div>
+                <p>Image carousal</p>
+                </div>
+                <div>
+                <p>Detail</p>
+                </div>
+            </div>
             <Footer />
         </div>
     )

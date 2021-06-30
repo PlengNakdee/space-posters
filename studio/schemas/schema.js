@@ -14,7 +14,7 @@ export default createSchema({
     {
       name: 'posters',
       type: 'document',
-      title: 'Poster',
+      title: 'Posters',
       fields: [
         {
           title: "Title",
@@ -23,11 +23,36 @@ export default createSchema({
           validation: Rule => Rule.required()
         },
         {
-          title: 'Image',
-          name: 'image',
+          title: "Detail",
+          name: "detail",
+          type: 'text',
+          validation: Rule => Rule.required()
+        },
+        {
+          title: 'Slug',
+          name: 'slug',
+          type: 'string',
+          validation: Rule => Rule.required()
+        },
+        {
+          title: 'Image1',
+          name: 'image1',
           type: 'image',
           validation: Rule => Rule.required()
-        },],
+        },
+        {
+          title: 'Image2',
+          name: 'image2',
+          type: 'image',
+          validation: Rule => Rule.required()
+        },
+        {
+          title: 'Image3',
+          name: 'image3',
+          type: 'image',
+          validation: Rule => Rule.required()
+        },
+      ],
     } ]),
 
 })
