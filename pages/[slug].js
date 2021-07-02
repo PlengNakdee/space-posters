@@ -46,12 +46,13 @@ const Poster = ({ poster }) => {
             </div> */}
             <Header />
             <div className='grid justify-items-center space-y-4 sm:grid-cols-2 sm:space-y-0'>
+            
 
                 <div className="p-6">
                     <p>Image carousal</p>
                 </div>
                 <div className="p-6">
-                    <p>{poster.title}</p>
+                    <p className="text-2xl">{poster.title}</p>
                     <p>{poster.detail}</p>
                     <p>Detail</p>
                 </div>
