@@ -49,11 +49,24 @@ const Poster = ({ poster }) => {
             
 
                 <div className="p-6">
-                    <p>Image carousal</p>
+                    <div className="flex flex-col items-center">
+  <div className="flex flex-col items-center">
+    <div className="swiper flex overflow-hidden w-3/4">
+      <img className="w-full h-full object-cover pt-6" src={poster.image1} id="slide1" />
+      <img className="w-full h-full object-cover pt-20" src="/img/mockup-11.png" id="slide2" />
+      <img className="w-full h-full object-cover pt-20" src="/img/mockup-12.png" id="slide3" />
+    </div>
+  </div>
+  <div className="flex mt-2">
+    <a href="#slide1" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+    <a href="#slide2" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+    <a href="#slide3" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+  </div>
+</div>
                 </div>
                 <div className="p-6">
-                    <p className="text-2xl">{poster.title}</p>
-                    <p>{poster.detail}</p>
+                    <p className="text-2xl sm:pt-6">{poster.title}</p>
+                    <p className="pt-4">{poster.detail}</p>
                     <p>Detail</p>
                 </div>
             </div>
