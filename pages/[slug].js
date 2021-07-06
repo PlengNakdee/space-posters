@@ -67,22 +67,9 @@ const Poster = ({ poster }) => {
                 <div className="p-6">
                     <p className="text-2xl sm:pt-6">{poster.title}</p>
                     <p className="pt-4">{poster.detail}</p>
-                    <p className="pt-4 text-xl">$39</p>
+                    <p className="pt-4 text-xl">${poster.price}</p>
                     <div className="pt-4 flex space-x-4">
-                        <div>
-                            <button
-                                className="hover:text-blue-500"
-                                onClick={() => addItem()}
-                            >
-                                Add to cart
-                            </button>
-                            <button
-                                className="hover:text-blue-500"
-                                onClick={() => removeItem()}
-                            >
-                                Remove
-                            </button>
-                        </div>
+                        <p>add to cart</p>
                     </div>
                 </div>
             </div>
@@ -107,8 +94,10 @@ export const getStaticPaths = async ({ locales }) => {
 };
 
 const singleBlogQuery = `*[_type == "posters" && slug == $slug] {
+    "id": _id,
     title,
     detail,
+    price,
     "image1": image1.asset->url,
     slug
 }[0]`;
