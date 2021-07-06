@@ -17,6 +17,12 @@ export default createSchema({
       title: 'Posters',
       fields: [
         {
+          title: "Id",
+          name: "id",
+          type: "string",
+          validation: Rule => Rule.required()
+        },
+        {
           title: "Title",
           name: "title",
           type: "string",

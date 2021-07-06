@@ -11,10 +11,12 @@
     "@headlessui/react": "^1.2.0",
     "@heroicons/react": "^1.0.1",
     "@sanity/client": "^2.11.0",
+    "@stripe/stripe-js": "^1.15.1",
     "next": "10.2.3",
     "next-i18next": "^8.3.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "use-shopping-cart": "^2.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

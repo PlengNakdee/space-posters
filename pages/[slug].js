@@ -6,11 +6,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getAllSlugs } from "../sanity_api/api";
 import sanity from "../sanity_api/sanity";
+import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
 // import Link from "next/link";
 
 const Poster = ({ poster }) => {
     const router = useRouter();
     const { t } = useTranslation(["common", "header"]);
+    const { addItem, removeItem } = useShoppingCart()
     // for richtext
     // const serializers = {
     //     types: {
@@ -46,28 +48,42 @@ const Poster = ({ poster }) => {
             </div> */}
             <Header />
             <div className='grid justify-items-center space-y-4 sm:grid-cols-2 sm:space-y-0'>
-            
-
                 <div className="p-6">
                     <div className="flex flex-col items-center">
-  <div className="flex flex-col items-center">
-    <div className="swiper flex overflow-hidden w-3/4">
-      <img className="w-full h-full object-cover pt-6" src={poster.image1} id="slide1" />
-      <img className="w-full h-full object-cover pt-20" src="/img/mockup-11.png" id="slide2" />
-      <img className="w-full h-full object-cover pt-20" src="/img/mockup-12.png" id="slide3" />
-    </div>
-  </div>
-  <div className="flex mt-2">
-    <a href="#slide1" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
-    <a href="#slide2" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
-    <a href="#slide3" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
-  </div>
-</div>
+                        <div className="flex flex-col items-center">
+                            <div className="swiper flex overflow-hidden w-3/4">
+                                <img className="w-full h-full object-cover pt-6" src={poster.image1} id="slide1" />
+                                <img className="w-full h-full object-cover pt-20" src="/img/mockup-11.png" id="slide2" />
+                                <img className="w-full h-full object-cover pt-20" src="/img/mockup-12.png" id="slide3" />
+                            </div>
+                        </div>
+                        <div className="flex mt-2">
+                            <a href="#slide1" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+                            <a href="#slide2" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+                            <a href="#slide3" className="w-4 h-4 mx-1 bg-gray-400 rounded-full"></a>
+                        </div>
+                    </div>
                 </div>
                 <div className="p-6">
                     <p className="text-2xl sm:pt-6">{poster.title}</p>
                     <p className="pt-4">{poster.detail}</p>
-                    <p>Detail</p>
+                    <p className="pt-4 text-xl">$39</p>
+                    <div className="pt-4 flex space-x-4">
+                        <div>
+                            <button
+                                className="hover:text-blue-500"
+                                onClick={() => addItem()}
+                            >
+                                Add to cart
+                            </button>
+                            <button
+                                className="hover:text-blue-500"
+                                onClick={() => removeItem()}
+                            >
+                                Remove
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer />
