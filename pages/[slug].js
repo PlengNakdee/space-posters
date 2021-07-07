@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getAllSlugs } from "../sanity_api/api";
 import sanity from "../sanity_api/sanity";
-import { useShoppingCart, formatCurrencyString } from 'use-shopping-cart'
+import { useShoppingCart, formatCurrencyString } from "use-shopping-cart";
 // import Link from "next/link";
 
 const Poster = ({ poster }) => {
@@ -67,11 +67,21 @@ const Poster = ({ poster }) => {
                 <div className="p-6">
                     <p className="text-2xl sm:pt-6">{poster.title}</p>
                     <p className="pt-4">{poster.detail}</p>
-                    <p className="pt-4 text-xl">${poster.price}</p>
+                    <p className="pt-4 text-xl">{formatCurrencyString({
+                        value: poster.price,
+                        currency: "usd",
+                    })}</p>
                     <div className="pt-4 flex space-x-4">
-                        <p>add to cart</p>
+                        <button className="hover:text-blue-500" onClick={() => addItem(poster.id)}>add to cart</button>
+                        <button className="hover:text-blue-500" onClick={() => removeItem(poster.id)}>remove from cart</button>
                     </div>
                 </div>
+                <a
+                    href="/posters"
+                    className="text-white text-lg sm:text-3xl"
+                >
+                    &larr; back
+                </a>
             </div>
             <Footer />
         </div>

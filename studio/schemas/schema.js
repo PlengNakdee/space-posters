@@ -32,6 +32,7 @@ export default createSchema({
           title: "Price",
           name: "price",
           type: "number",
+          description: 'Using stripe, if the price is $10 add 1000',
           validation: Rule => Rule.required()
         },
         {
