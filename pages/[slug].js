@@ -85,9 +85,7 @@ const Poster = ({ poster }) => {
                             </div>
                         </div>
                         <CartSummary />
-                        <Cart>
-                        </Cart>
-                        
+                        <Cart></Cart>
                     </div>
                 </div>
                 <a
