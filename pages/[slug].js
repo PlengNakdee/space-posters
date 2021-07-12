@@ -8,6 +8,7 @@ import { getAllSlugs } from "../sanity_api/api";
 import sanity from "../sanity_api/sanity";
 import { useShoppingCart, formatCurrencyString } from "use-shopping-cart";
 import CartSummary from "../components/CartSummary";
+import Cart from "../components/Cart";
 import Product from "../components/Product";
 // import Link from "next/link";
 
@@ -68,8 +69,25 @@ const Poster = ({ poster }) => {
                 </div>
                 <div className="p-6">
                     <div>
-                    <Product key={poster.id} title={poster.title} detail={poster.detail} price={poster.price}/>
-                        {/* <CartSummary /> */}
+                        {/* <Product key={poster.id} title={poster.title} detail={poster.detail} price={poster.price}/> */}
+                        <div key={poster.id}>
+                            <p className="text-2xl sm:pt-6">{poster.title}</p>
+                            <p className="pt-4">{poster.detail}</p>
+                            <p className="pt-4 text-2xl">
+                                {formatCurrencyString({
+                                    value: poster.price,
+                                    currency: "USD",
+                                })}
+                            </p>
+                            <div className="space-x-4 text-lg">
+                                <button className="hover:text-blue-500" onClick={() => addItem(poster)}>add to cart</button>
+                                <button className="hover:text-blue-500" onClick={() => removeItem(poster.id)}>remove from cart</button>
+                            </div>
+                        </div>
+                        <CartSummary />
+                        <Cart>
+                        </Cart>
+                        
                     </div>
                 </div>
                 <a

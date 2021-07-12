@@ -38,7 +38,7 @@ export default function CartSummary() {
 
   return (
     <form onSubmit={handleCheckout}>
-      <h2>Cart summary</h2>
+      <h2 className=''>Cart summary</h2>
       {/* This is where we'll render our cart;
 			The item count changes quickly and may
 			be mismatched between client and server.
@@ -49,7 +49,7 @@ export default function CartSummary() {
         <strong>Number of Items:</strong> {cartCount}
       </p>
       <p suppressHydrationWarning>
-        <strong>Total:</strong> {formattedTotalPrice}
+        <strong>Total:</strong> ${formattedTotalPrice}
       </p>
       
 			<p>Use 4242 4242 4242 4242 as the card number.</p>
