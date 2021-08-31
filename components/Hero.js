@@ -16,7 +16,7 @@ const Hero = () => {
             href="/posters"
             className="text-white text-lg absolute top-1/2 left-3/4 sm:text-4xl"
           >
-            continue -&gt;
+            continue &rarr;
           </a>
         </div>
       </div>

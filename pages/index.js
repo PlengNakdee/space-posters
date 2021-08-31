@@ -21,7 +21,7 @@ const Home = () => {
           url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
         </style>
       </Head>
-      <div class="font-Poppins text-white">
+      <div className="font-Poppins text-white">
         {/*<div>
           <Link href="/" locale={router.locale === "en" ? "th" : "en"}>
             <button>{t("EN/TH")}</button>
